@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Notes Sharing Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Notes Sharing Portal</h1>
+        <p>Share knowledge. Learn together.</p>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Your Notes</h2>
+
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="Notes Title" required>
+
+                <input type="text" name="subject" placeholder="Subject Name" required>
+
+                <textarea name="description" placeholder="Description"></textarea>
+
+                <input type="text" name="uploadedBy" placeholder="Your Name" required>
+
+                <label>Select Notes File (PDF, DOC, DOCX)</label>
+                <input type="file" name="noteFile" accept=".pdf,.doc,.docx" required>
+
+                <button type="submit">Upload Notes</button>
+            </form>
+
+            <p id="uploadMessage"></p>
+        </section>
+
+        <section class="notes-section">
+            <h2>Available Study Notes</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by title or subject..."
+            >
+
+            <div id="notesContainer">
+                Loading notes...
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Notes Sharing Portal | Learn and Share</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
